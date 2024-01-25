@@ -17,7 +17,10 @@ function changeSketchpad(N){
 }
 changeSketchpad(16);
  document.querySelector('.btn').addEventListener('click',()=>{
-    const N=prompt('enter a value within 64');
+    let N;
+    do{
+        N=prompt('enter a no of squares per side(1 - 100)');
+    }while(N<=0 || N>100);
     changeSketchpad(N);
  });
 
